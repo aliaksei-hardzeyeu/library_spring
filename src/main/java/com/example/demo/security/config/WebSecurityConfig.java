@@ -79,6 +79,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated();
 
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
-		http.logout().logoutUrl("/api/auth/logout");
+		http.logout().logoutUrl("/api/auth/logout"); //unclear whether it works or not
 	}
 }
